@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,73 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Train Schdule</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <!-- Head -->
+        <div class="jumbotron">
+            <h1 class="text-center">Train Schdule</h1>
+        </div>
+        <!-- train schdule -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header text-center">Current Train Schdule</div>
+                    <div class="card-body">
+                        <!-- table inside card -->
+                        <div class="table-responsive-md">
+                            <table class="table table-sm table-hover text-center">
+                                <thead id="table-header" class="text-white">
+                                    <tr>
+                                        <th scope="col">Train Name</th>
+                                        <th scope="col">Destination</th>
+                                        <th scope="col">Frequency (min)</th>
+                                        <th scope="col">Next Arrival</th>
+                                        <th scope="col">Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <!-- content following access from database -->
+                                <tbody id="table-body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  form to add new train schdule -->
+        <div class="row">
+            <div class="col-md-12">
+                <!--add new schdule for train schdule  -->
+                <div class="card mt-3 mb-3">
+                    <div class="card-header text-center ">Add Train</div>
+                    <div class="card-body">
+                        <!-- add new train schdule -->
+                        <form>
+                            <div class="form-group font-weight-bold">
+                                <label for="train-name-input">Train Name</label>
+                                <input class="form-control" type="text" required>
+                            </div>
+                            <div class="form-group font-weight-bold">
+                                <label for="destination-input">Destination</label>
+                                <input class="form-control" type="text" required>
+                            </div>
+                            <div class="form-group font-weight-bold">
+                                <label for="first-train-input">First Train Time (HH:mm - military
+                                    time)</label>
+                                <input class="form-control" type="text" required>
+                            </div>
+                            <div class="form-group font-weight-bold">
+                                <label for="frequency-input">Frequency (min)</label>
+                                <input class="form-control" type="number" min="1" required>
+                            </div>
+                            <button type=submit class="btn font-weight-bold">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -29,4 +95,5 @@
     <!-- link my javascript file -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
+
 </html>
