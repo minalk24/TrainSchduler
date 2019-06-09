@@ -50,28 +50,28 @@
         <!--  form to add new train schdule -->
         <div class="row">
             <div class="col-md-12">
-                <!--add new schdule for train schdule  -->
+                <!--add new schedule for train schdule  -->
                 <div class="card mt-3 mb-3">
                     <div class="card-header text-center ">Add Train</div>
                     <div class="card-body">
                         <!-- add new train schdule -->
-                        <form>
+                        <form id="train-form">
                             <div class="form-group font-weight-bold">
                                 <label for="train-name-input">Train Name</label>
-                                <input class="form-control" type="text" required>
+                                <input class="form-control" type="text" id="nameInput" required>
                             </div>
                             <div class="form-group font-weight-bold">
                                 <label for="destination-input">Destination</label>
-                                <input class="form-control" type="text" required>
+                                <input class="form-control" type="text" id="destinationInput" required>
                             </div>
                             <div class="form-group font-weight-bold">
                                 <label for="first-train-input">First Train Time (HH:mm - military
                                     time)</label>
-                                <input class="form-control" type="text" required>
+                                <input class="form-control" type="text" id="timeInput" required>
                             </div>
                             <div class="form-group font-weight-bold">
                                 <label for="frequency-input">Frequency (min)</label>
-                                <input class="form-control" type="number" min="1" required>
+                                <input class="form-control" type="number" min="1" id="frequencyInput" required>
                             </div>
                             <button type=submit class="btn font-weight-bold">Submit</button>
                         </form>
@@ -81,6 +81,10 @@
         </div>
     </div>
 
+    <!--link to the firebase -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!-- link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- link the bootstrap's javascript files -->
