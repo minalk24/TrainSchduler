@@ -16,7 +16,7 @@
   3
 
 ## Click on the following link to deployed site
-[TrainSchduler]( https://minalk24.github.io/TrainSchduler/)
+[TrainSchduler](https://minalk24.github.io/TrainSchduler/)
 
  ## Images 
 ![# TrainSchduler](assets/images/trainschduler.png)

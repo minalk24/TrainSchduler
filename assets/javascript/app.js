@@ -47,3 +47,33 @@ $("#train-form").on("submit", function (event) {
     $("#frequencyInput").val("");
 
 });
+
+//data which is added to the database grab it and render on the web page
+database.ref().on("child_added", function(childSnapshot){
+    console.log("child-added: " + childSnapshot.val());
+
+    //grab data from firebase database
+    var trainName = childSnapshot.val().name;
+    console.log(trainName);
+    var trainDestination = childSnapshot.val().destination;
+    console.log(trainDestination);
+    var trainTime = childSnapshot.val().time;
+    console.log(trainTime);
+    var trainFrequency = childSnapshot.val().frequency;
+    console.log(trainFrequency);
+
+    //create row for table
+    var row = $("<tr>").append(
+        $("<td>").text(trainName),
+        $("<td>").text(trainDestination),
+        $("<td>").text(trainTime),
+        $("<td>").text(trainFrequency)
+    );
+
+    //append new row in body
+    $("#table-body").append(row);
+
+    //if error occurs, log them to console
+}, function(errorObject) {
+    console.log("Errors: " + errorObject.code);
+})
