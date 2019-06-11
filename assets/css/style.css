@@ -1,0 +1,11 @@
+body {
+    background-image: url("../images/train.gif");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: cursive;
+}
+
+.card {
+    opacity: 0.9;
+}
